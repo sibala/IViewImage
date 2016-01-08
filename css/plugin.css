@@ -1,0 +1,29 @@
+/**
+ * Here comes specific styles for IViewImage plugin.
+ */
+
+/*--- plugin gallery ---*/
+
+.gallery-current img {
+  margin: 0px 5px 0px 5px;
+} 
+
+.gallery-all {
+  border: 1px solid #bbb;
+  overflow: scroll;
+}
+
+/*--- plugin lightbox ---*/
+  
+#overlay {
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background:black url(loader.gif) no-repeat scroll center center;
+}
+
+#lightbox {
+  position:fixed;
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang='en' class='no-js'>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <meta name="robots" content="noarchive" />
+  <meta name="robots" content="nofollow" />
+  <title>Example page on usage of IViewImage</title>
+
+  <title><?=isset($title) ? $title : 'Template for testprograms in JavaScript'?></title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/plugin.css" />
+
+</head>
+<body>
+
+<header>
+  <nav id="top-menu">
+  <ul>
+    <li><a href="#">IViewImage</a></li>
+    <li><a href="#slider-section">Slider</a></li>
+    <li><a href="#lightbox-section">Lightbox</a></li>
+    <li><a href="#gallery-section">Gallery</a></li>
+    <li><a href="https://github.com/sibala/IViewImage">Github</a></li>
+  </ul>
+  </nav>
+</header>
+<div class="content">
+
+  <h1 id="slider-section">Slider</h1>
+  <div id="slider">
+    <img src="img/colorful-artistic-abstract-wood-web-header.jpg"  />
+    <img src="img/magnificent-colorful-feathers-abstract-header.jpg"/>
+  </div>
+  <br>
+  <h3>Usage</h3>
+  <p>Link to an image using the following html syntax:<br />
+  <code>
+  <pre class="code">
+
+  &lt;div id="slider&gt;
+    &lt;img src="URL to image" />
+    &lt;img src="URL to image"/>
+  &lt;/div&gt;
+  </pre>
+  </code>
+  </p>
+  <p>Example on a call with default settings:<br />
+  <code>
+  <pre class="code">
+
+  $(document).ready(function(){
+    $('#slider').slider({
+    });
+  });
+  </pre></code>
+  <pre>
+
+  The default settings are
+      transition: 'fade',
+      time:     '4000',
+      width: original width of the image,
+      hight: original hight of the image
+    </pre></p>
+  <p>The slider example above uses the following customized settings:<br />
+  <code><pre class="code">
+
+  $(document).ready(function(){
+    $('#slider').slider({
+      transition: 'fade',
+    time:       '3000',
+    width:      '940',
+    hight:      '300'
+    });
+  });
+  </pre></code>
+  </p>
+  <br>
+  <br>
+
+  <h1 id="lightbox-section">Lightbox</h1>
+  <a class="lightbox" href="img/abstract_autumn_background3.jpg"><img src="img/abstract_autumn_background3.jpg" width="310" /></a>
+  <a class="lightbox" href="img/abstract_autumn_background1.jpg"><img src="img/abstract_autumn_background1.jpg" width="310" /></a>
+  <a class="lightbox" href="img/abstract_autumn_background2.jpg"><img src="img/abstract_autumn_background2.jpg" width="310" /></a>
+  <br>
+  <br>
+  <h3>Usage</h3>
+  <p>Link to an image using the following html syntax:<br />
+  <code>
+  <pre class="code">
+
+  &lt;a class="lightbox" href="Url to image"&gt;
+    &lt;img src="Url to image" /&gt;
+  &lt;/a&gt;
+  </pre>
+  </code>
+  </p>
+  
+  <p>Include the following css syntax for styling lightboxes.</p>
+  <code><pre class="code">
+
+  #overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:black url(loader.gif) no-repeat scroll center center;
+  }
+  
+  #lightbox {
+    position:fixed;
+  }
+  </pre></code>
+  <br>
+
+  <p>Example on a call with default settings:<br />
+  <code><pre class="code">
+
+  $(document).ready(function(){
+    $('.lightbox').lightbox({
+    });
+  });
+  </pre></code>
+  <pre>
+
+  The default settings are
+      opacity: '0.5',
+      color: 'black',
+      width: original width of the image,
+      hight: original hight of the image
+    </pre></p>
+  <p>The lightbox examples above uses the following customized settings:<br />
+  <code><pre class="code">
+
+  $(document).ready(function(){
+    $('.lightbox').lightbox({
+    opacity: '0.8',
+    color: '#551F0D',
+    width: '700',
+    hight: '500'
+    });
+  });
+  </pre></code>
+  </p>
+  <br>
+  <br>
+
+  <h1 id="gallery-section">Gallery</h1>
+  <div id="gallery">
+    <div class="gallery-current"><img/></div>
+    <div class="gallery-all"> 
+      <img src="img/abstract_autumn_background3.jpg"/>
+      <img src="img/abstract_autumn_background4.jpg"/>
+      <img src="img/abstract_autumn_background2.jpg"/>
+      <img src="img/abstract_autumn_background1.jpg"/>
+      <img src="img/abstract_autumn_background0.jpg"/>
+    </div>
+  </div>
+  <br>
+  <h3>Usage</h3>
+  <p>Link to an image using the following html syntax:<br />
+  <code>
+  <pre class="code">
+
+  &lt;div id="gallery"&gt;
+    &lt;div class="gallery-current"&gt;&lt;img/&gt;&lt;/div&gt;
+    &lt;div class="gallery-all"&gt; 
+      &lt;img src="img/abstract_autumn_background3.jpg"/&gt;
+      &lt;img src="img/abstract_autumn_background4.jpg"/&gt;
+      &lt;img src="img/abstract_autumn_background2.jpg"/&gt;
+      &lt;img src="img/abstract_autumn_background1.jpg"/&gt;
+      &lt;img src="img/abstract_autumn_background0.jpg"/&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  </pre>
+  </code></p>
+
+  <p>Include the following css syntax for styling the gallery.</p>
+  <code><pre class="code">
+
+  .gallery-current img {
+    margin: 0px 5px 0px 5px;
+  } 
+  .gallery-all {
+    border: 1px solid #bbb;
+    overflow: scroll;
+  }
+  </pre></code>
+  <br>
+
+  <p>Example on a call with default settings:<br />
+  <code><pre class="code">
+
+  $(document).ready(function(){
+    $('#gallery').gallery({
+    });
+  });
+  </pre></code>
+  <br>
+  <pre>
+  The default settings are
+      imageSide:       'right',
+      imageWidth:      '600',
+      imageHeight:     '400',
+      thumbnailWidth:  '150',
+      thumbnailHeight: '100'
+  </pre>
+  </p>
+  <p>The lightbox examples above uses the following customized settings:<br />
+  <code><pre class="code">
+
+  $(document).ready(function(){
+    $('#gallery').gallery({
+      imageSide:       'left',
+      imageWidth:      '600',
+      imageHeight:     '400',
+      thumbnailWidth:  '150',
+      thumbnailHeight: '100'
+    });
+  });
+  </pre></code>
+  </p>
+
+</div> <!-- content -->
+
+<footer id='footer'>
+<br />
+<span>Copyright 2016 Sibar Al-ani</span>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.IViewImage.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html> 

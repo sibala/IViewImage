@@ -1,0 +1,142 @@
+/*--- html ---*/
+
+html {
+  font-family: Calibri, Arial, Helvetica, sanserif;
+  color: #333;
+  line-height: 1.5em;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-size: 2em; /* 24px --> 24 ÷ 16 = 1.5 */
+  line-height: 1em; /* 24px --> 24 ÷ 24 = 1 */
+  /*border-bottom: 1px dotted #853014;*/
+  border-bottom: 2px dotted #D04C20;
+  color: #551F0D;
+}
+
+h2 {
+  font-size: 1.375em; /* 22px --> 22 ÷ 16 = 1.375 */
+  line-height: 1.0909em; /* 24px --> 24 ÷ 22 = 1.090909(09) */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px --> 20 ÷ 16 = 1.25 */
+  line-height: 1.2em; /* 24px --> 24 ÷ 20 = 1.2 */
+  color: #551F0D;
+
+}
+
+h4 {
+  font-size: 1.125em; /* 18px --> 18 ÷ 16 = 1.125 */
+  line-height: 1.333em; /* 24px --> 24 ÷ 18 = 1.3333333(3) */
+}
+
+h5, h6 {
+  font-size: 1em; /* 16px --> 16 ÷ 16 = 1 */
+  line-height: 1.5em; /* 24px --> 24 ÷ 16 = 1.5 */
+  font-family: Calibri, Arial, Helvetica, sanserif;
+}
+
+/*--- PARAGRAPHS ---*/
+
+article, section, p {
+  margin-bottom: 24px;
+}
+
+/*--- Links ---*/
+
+a {
+  color:#C85C34;
+}
+a:hover {
+  color:#7D391F;
+}
+
+
+/*--- menu ---*/
+
+#top-menu {
+  position: fixed;
+  z-index: 100;
+  background: #551F0D;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+#top-menu ul {
+  list-style-type: none;
+}
+
+#top-menu li {
+    float: left;
+}
+
+#top-menu a {
+  display: block;
+  padding: 5px 25px 7px 25px;
+  width: 4em;
+  text-align: center;
+  -webkit-transition: .5s all ease-out;
+  -moz-transition: .5s all ease-out;
+  transition: .5s all ease-out;
+  border-top: 3px solid #551F0D;
+  color: #bbb;
+  text-decoration: none;
+}
+
+#top-menu a:hover {
+  color: white;
+}
+
+#top-menu li.active a {
+  border-top: 3px solid white;
+  color: white;
+}
+#top-menu li a.info  {
+  border-top: 3px solid white;
+  color: white;
+}
+
+/*--- main content ---*/
+
+.content {
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  width: 960px;
+  box-shadow: 0px 3px 2px #888888;
+
+}
+
+pre.code {
+  color: brown;
+  box-shadow: 0px 0px 1px #888888;
+  border-radius: 5px;
+  background-color: #F5F5F5;
+}
+
+ul {
+  margin-left: 30px;
+}
+/*--- footer ---*/
+
+footer {
+  width:100%;
+  float: left;
+  height:100px;
+  padding-left:20px;
+  text-align: center;
+  color: #999;
+  box-shadow: inset 0 1px 3px #999;
+  border-bottom:none;
+  background-color: #fff
+}
